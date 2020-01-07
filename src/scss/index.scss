@@ -1,6 +1,13 @@
 @import "./reset";
 @import "./variables";
 
+.decorativeBar--small {
+  height: 10px;
+  width: 80px;
+  margin: 20px;
+  background-color: $color_yellow_0;
+}
+
 .header {
   position: relative;
   display: flex;
@@ -154,13 +161,6 @@
   color: $color_blue_0;
 }
 
-.services_decorativeBar {
-  height: 10px;
-  width: 80px;
-  margin: 20px;
-  background-color: $color_yellow_0;
-}
-
 .services_cardGroup {
   display: flex;
   flex-direction: column;
@@ -171,17 +171,19 @@
   }
 }
 
-.services_card {
-  box-sizing: border-box;
-  padding: 20px;
-
+.services_cardWrapper {
   @media (min-width: $services_breakpoint_m) {
     width: 50%;
   }
 
   @media (min-width: $services_breakpoint_l) {
-    width: 33%;
+    width: 33.333%;
   }
+}
+
+.services_card {
+  box-sizing: border-box;
+  padding: 20px;
 }
 
 .services_cardImageWrapper {
@@ -212,4 +214,92 @@
   font-family: $font_family_normal;
   font-size: $font_xs;
   line-height: 1.5*$font_xs;
+}
+
+.about_wrapper {
+  @media (min-width: $about_breakpoint_xl) {
+    width: $about_breakpoint_xl;
+    margin: 0 auto;
+  }
+}
+
+.about {
+  display: flex;
+  padding: 0 20px;
+
+  @media (max-width: $about_breakpoint_s) {
+    flex-direction: column;
+  }
+
+  @media (min-width: $about_breakpoint_s) {
+    flex-direction: row;
+    height: 350px;
+  }
+
+  @media (min-width: $about_breakpoint_m) {
+    flex-direction: row;
+    height: 500px;
+  }
+}
+
+.about_imageWrapper {
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+
+  @media (max-width: 550px) {
+    order: 0;
+    height: 350px;
+  }
+
+  @media (min-width: 550px) {
+    order: 1;
+    flex: 0 0 50%;
+  }
+}
+
+.about_image {
+  display: block;
+  height: 100%;
+}
+
+.about_contentWrapper {
+  background-color: $gray_95;
+  padding: 20px 0;
+
+  @media (max-width: 550px) {
+
+  }
+
+  @media (min-width: 550px) {
+    flex: 0 0 50%;
+  }
+}
+
+.about_heading {
+  margin: 20px;
+  font-family: $font_family_normal;
+  font-size: $font_xl;
+  font-weight: bold;
+  color: $color_blue_0;
+}
+
+.about_text {
+  margin: 20px;
+  font-family: $font_family_normal;
+
+  @media (max-width: 1000px) {
+    font-size: $font_xs;
+    line-height: 1.5*$font_xs;
+  }
+
+  @media (min-width: 700px) {
+    font-size: $font_s;
+    line-height: 1.5*$font_s;
+  }
+
+  @media (min-width: 1200px) {
+    font-size: $font_m;
+    line-height: 1.5*$font_m;
+  }
 }
