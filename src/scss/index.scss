@@ -116,7 +116,7 @@
 .hero {
   padding: 0;
   height: $hero_height;
-  background-image: url("../images/lighted_beige_house.png");
+  background-image: url("../images/lighted_beige_house.jpg");
   background-position: 50% 20%;
   background-size: cover;
 }
@@ -130,7 +130,7 @@
   color: $gray_20;
 
   @media (min-width: $hero_breakpoint_l) {
-    padding: 10px;
+    padding: 20px;
     font-size: $font_l;
   }
 }
